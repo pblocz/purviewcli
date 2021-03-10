@@ -1,6 +1,6 @@
 # Azure Purview CLI
 
-This package provides a command line interface to Azure Purview's REST API.  
+This package provides a command line interface to Azure Purview's REST API.
 ![purviewcli](https://raw.githubusercontent.com/tayganr/purviewcli/master/doc/image/purviewcli_example.png)
 
 ## Installation
@@ -18,7 +18,7 @@ pip install purviewcli
     * `AZURE_TENANT_ID` *(optional)*
     * `AZURE_CLIENT_SECRET` *(optional)*
 
-   Note: The environment variables related to authentication are optional as there are several methods in which we can pass credentials to purviewcli in order to authenticate with an instance of Azure Purview. See [Authentication](#authentication) for more details. 
+   Note: The environment variables related to authentication are optional as there are several methods in which we can pass credentials to purviewcli in order to authenticate with an instance of Azure Purview. See [Authentication](#authentication) for more details.
 
 3. Execute command (e.g. `!pv glossary read`)
 
@@ -33,7 +33,7 @@ The purviewcli package leverages the `DefaultAzureCredential` method from [azure
 
 ## Authorization
 
-The identity executing Azure Purview CLI commands will need access to the deployed Azure Purview resource along with the following role assignments:  
+The identity executing Azure Purview CLI commands will need access to the deployed Azure Purview resource along with the following role assignments:
 
 * Purview Data Curator
 * Purview Data Source Administrator
@@ -165,6 +165,7 @@ pv scan readSources
 pv scan readScans --datasource=<val>
 pv scan readHistory --datasource=<val> --scanName=<val>
 pv scan readFilters --datasource=<val> --scanName=<val>
+pv scan readTriggers --datasource=<val> --scanName=<val>
 pv scan readScanRulesets
 pv scan readSystemScanRulesets
 pv scan readSystemScanRulesetsSettings

@@ -39,6 +39,12 @@ def scanReadFilters(args):
     data = get_data(http_dict)
     return data
 
+def scanReadTriggers(args):
+    endpoint = '/datasources/%s/scans/%s/triggers' % (args['--datasource'], args['--scanName'])
+    http_dict = {'app': 'scan', 'method': 'GET', 'endpoint': endpoint, 'params': None, 'payload': None}
+    data = get_data(http_dict)
+    return data
+
 def scanRun(args):
     endpoint = '/datasources/%s/scans/%s/run' % (args['--datasource'], args['--scanName'])
 
@@ -46,7 +52,7 @@ def scanRun(args):
         payload = {'scanLevel': args['--scanLevel']}
     else:
         payload = None
-    
+
     http_dict = {'app': 'scan', 'method': 'POST', 'endpoint': endpoint, 'params': None, 'payload': payload}
     data = get_data(http_dict)
     return data
@@ -112,7 +118,7 @@ def scanCreateSource(args):
         "name": args['--datasource'],
         "properties": {}
     }
-    
+
     # Source Properties
     if args['--kind'] == 'AzureCosmosDb':
         payload['properties'] = {

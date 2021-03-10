@@ -1,5 +1,5 @@
 """
-usage: 
+usage:
     pv scan read --datasource=<val> --scanName=<val>
     pv scan run --datasource=<val> --scanName=<val> [--scanLevel=<val>]
     pv scan createSource --datasource=<val> --kind=<val> [--accountUri=<val> --subscriptionId=<val> --resourceGroup=<val> --location=<val> --resourceName=<val> --endpoint=<val> --serverEndpoint=<val> --tenant=<val> --parentCollection=<val> --host=<val> --applicationServer=<val> --systemNumber=<val> --clusterUrl=<val> --roleARN=<val> --serviceUrl=<val>]
@@ -9,6 +9,7 @@ usage:
     pv scan readScans --datasource=<val>
     pv scan readHistory --datasource=<val> --scanName=<val>
     pv scan readFilters --datasource=<val> --scanName=<val>
+    pv scan readTriggers --datasource=<val> --scanName=<val>
     pv scan readScanRulesets
     pv scan readSystemScanRulesets
     pv scan readSystemScanRulesetsSettings
